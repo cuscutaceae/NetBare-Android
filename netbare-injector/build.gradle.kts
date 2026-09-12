@@ -46,5 +46,5 @@ afterEvaluate {
 
 dependencies {
     implementation (project(":netbare-core"))
-    implementation ("com.android.support:appcompat-v7:28.0.0")
+    implementation("androidx.appcompat:appcompat:1.6.1")
 }
