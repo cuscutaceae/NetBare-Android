@@ -22,6 +22,26 @@ android {
             isMinifyEnabled = false
         }
     }
+
+    publishing {
+        singleVariant("release") {
+            withSourcesJar()
+            // withJavadocJar()
+        }
+    }
+}
+
+afterEvaluate {
+    publishing {
+        publications {
+            create<MavenPublication>("release") {
+                from(components["release"])
+                groupId = "com.github.megatronking.netbare"
+                artifactId = "netbare-core"
+                version = "0.1.0"
+            }
+        }
+    }
 }
 
 dependencies {

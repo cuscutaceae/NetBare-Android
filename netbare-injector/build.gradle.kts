@@ -17,10 +17,29 @@ android {
         minSdk = 24
     }
 
-
     buildTypes {
         release {
             isMinifyEnabled = false
+        }
+    }
+
+    publishing {
+        singleVariant("release") {
+            withSourcesJar()
+            // withJavadocJar()
+        }
+    }
+}
+
+afterEvaluate {
+    publishing {
+        publications {
+            create<MavenPublication>("release") {
+                from(components["release"])
+                groupId = "com.github.megatronking.netbare"
+                artifactId = "netbare-injector"
+                version = "0.1.0"
+            }
         }
     }
 }
