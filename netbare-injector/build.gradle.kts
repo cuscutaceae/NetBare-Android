@@ -3,7 +3,7 @@ plugins {
 }
 
 android {
-    namespace = "com.github.megatronking.netbare"
+    namespace = "com.github.megatronking.netbare.injector"
 
     compileSdk {
         version = release(36)

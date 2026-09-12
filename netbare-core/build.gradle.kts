@@ -3,7 +3,7 @@ plugins {
 }
 
 android {
-    namespace = "com.github.megatronking.netbare"
+    namespace = "com.github.megatronking.netbare.core"
     
     compileSdk {
         version = release(36)
