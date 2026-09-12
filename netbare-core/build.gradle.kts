@@ -31,4 +31,8 @@ dependencies {
     implementation("org.bouncycastle:bcpkix-jdk15on:1.56")
     implementation("org.bouncycastle:bcprov-jdk15on:1.56")
     implementation("com.google.guava:guava:19.0")
+    
+    configurations.all {
+        exclude(group = "com.google.guava", module = "listenablefuture")
+    }
 }
